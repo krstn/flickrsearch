@@ -6,7 +6,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:fitsSystemWindows="true"
-		tools:context=".app.MainActivity">
+		tools:context=".app.activities.MainActivity">
 
 	<android.support.design.widget.AppBarLayout
 			android:layout_width="match_parent"
@@ -24,8 +24,7 @@
 				android:hint="Search Flickr"
 				android:imeOptions="actionSearch"
 				android:paddingBottom="16dp"
-				android:singleLine="true"
-				android:textSize="16dp"/>
+				android:singleLine="true"/>
 
 	</android.support.design.widget.AppBarLayout>
 

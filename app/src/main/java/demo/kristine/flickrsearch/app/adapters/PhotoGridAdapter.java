@@ -28,6 +28,10 @@ public class PhotoGridAdapter extends RecyclerView.Adapter<PhotoGridAdapter.View
     mImageUrls = imageUrl;
   }
 
+  public void setOnItemClickListener(OnItemClickListener listener) {
+    mOnItemClickListener = listener;
+  }
+
   @Override
   public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_photo_grid, parent, false);

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fitsSystemWindows="true"
+		tools:context=".app.activities.MainActivity">
+
+	<RelativeLayout
+			android:id="@+id/main_container"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@android:color/black">
+
+		<ImageView
+				android:id="@+id/img_photo"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scaleType="centerCrop"/>
+
+		<RelativeLayout
+				android:id="@+id/view_details"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:background="@drawable/photo_details_overlay"
+				android:padding="@dimen/activity_horizontal_margin">
+
+			<TextView
+					android:id="@+id/txt_title"
+					android:layout_marginBottom="4dp"
+					android:layout_width="match_parent"
+					android:layout_marginTop="16dp"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="Title"
+					android:textColor="@android:color/white"
+					android:textSize="20sp"/>
+
+			<TextView
+					android:id="@+id/txt_user"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/txt_title"
+					android:gravity="center"
+					android:textColor="@android:color/white"/>
+
+			<TextView
+					android:id="@+id/txt_date"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/txt_user"
+					android:gravity="center"
+					android:textSize="12sp"
+					android:textColor="@android:color/darker_gray"/>
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

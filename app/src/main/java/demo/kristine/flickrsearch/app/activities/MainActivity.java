@@ -1,4 +1,4 @@
-package demo.kristine.flickrsearch.app;
+package demo.kristine.flickrsearch.app.activities;
 
 import android.content.Intent;
 import android.provider.Settings;
@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import demo.kristine.flickrsearch.R;
+import demo.kristine.flickrsearch.app.Config;
 import demo.kristine.flickrsearch.app.adapters.PhotoGridAdapter;
 import demo.kristine.flickrsearch.util.ConnectivityUtil;
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
     mRecyclerView.setItemAnimator(new DefaultItemAnimator());
     mRecyclerView.setAdapter(mAdapter);
+    mAdapter.setOnItemClickListener(mItemClickListener);
 
     mMainLoading = findViewById(R.id.main_loading);
   }
@@ -138,6 +140,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
       }
       return false;
+    }
+  };
+
+  private PhotoGridAdapter.OnItemClickListener mItemClickListener = new PhotoGridAdapter.OnItemClickListener() {
+    @Override
+    public void onItemClick(View view, int position) {
+      Intent intent = new Intent(getApplicationContext(), PhotoDetailsActivity.class);
+      intent.putExtra(PhotoDetailsActivity.EXTRA_PHOTO, mPhotos.get(position));
+      startActivity(intent);
     }
   };
 }
