@@ -32,7 +32,13 @@
 	<RelativeLayout
 			android:id="@+id/main_container"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent">
+			android:layout_height="match_parent"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<demo.kristine.flickrsearch.app.widget.CustomRecyclerView
+				android:id="@+id/recycler_search_results"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"/>
 
 		<include
 				android:id="@+id/main_loading"
