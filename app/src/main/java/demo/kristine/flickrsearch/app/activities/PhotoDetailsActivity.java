@@ -65,7 +65,7 @@ public class PhotoDetailsActivity extends AppCompatActivity {
     ((TextView) findViewById(R.id.txt_title)).setText(mPhoto.getTitle());
     ((TextView) findViewById(R.id.txt_user)).setText(mPhoto.getOwner().getUsername());
 
-    Glide.with(getApplicationContext()).load(mPhoto.getLargeUrl())
+    Glide.with(getApplicationContext()).load(mPhoto.getMedium800Url())
         .thumbnail(0.5f)
         .crossFade()
         .diskCacheStrategy(DiskCacheStrategy.ALL)
