@@ -1,3 +1,7 @@
 <resources>
-	<string name="app_name">flickrsearch</string>
+	<string name="app_name">Flickr Search Demo</string>
+
+	<string name="action_settings">Settings</string>
+
+	<string name="error_no_internet">No Internet!</string>
 </resources>
